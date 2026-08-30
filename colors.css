@@ -1,0 +1,26 @@
+/* LUX Wellness palette. Base hexes are taken verbatim from the current lux site build:
+   gold #C9A84C, gold-light #E2C97E, gold-dim #8B6E2F, navy #0D1F3C, #1A3560, #243E6B,
+   cream #FAF7F2, text-mid #3A4A62, text-light #8492A8. Intermediate steps are interpolated. */
+:root{
+/* Navy ramp — structure, trust, dark bands */
+--navy-950:#070F1F;--navy-900:#0D1F3C;--navy-800:#132B52;--navy-700:#1A3560;--navy-600:#243E6B;--navy-500:#33517F;--navy-400:#5A749B;--navy-300:#8492A8;--navy-200:#B9C4D4;--navy-100:#DCE2EB;--navy-50:#F0F3F8;
+/* Back-compat aliases (blue-* was the previous naming) */
+--blue-950:var(--navy-950);--blue-900:var(--navy-900);--blue-800:var(--navy-800);--blue-700:var(--navy-700);--blue-600:var(--navy-600);--blue-500:var(--navy-500);--blue-400:var(--navy-400);--blue-200:var(--navy-200);--blue-100:var(--navy-100);--blue-50:var(--navy-50);
+/* Gold ramp — the brand's light */
+--gold-800:#6B551F;--gold-700:#8B6E2F;--gold-600:#A98C3C;--gold-500:#C9A84C;--gold-400:#D6BA68;--gold-300:#E2C97E;--gold-200:#EFDFB2;--gold-100:#F8F0DA;
+--gold:var(--gold-500);--gold-light:var(--gold-300);--gold-dim:var(--gold-700);
+/* Warm neutrals — cream page, white cards */
+--sand-900:#22262E;--sand-800:#3A4A62;--sand-700:#5A6880;--sand-600:#8492A8;--sand-400:#B6BECB;--sand-300:#DDD8CE;--sand-200:#EDE8DF;--sand-100:#F5F2EB;--sand-50:#FAF7F2;--cream:#FAF7F2;--white:#FFFFFF;
+/* Semantic status */
+--green-600:#2F7D5D;--green-100:#E3F0EA;--amber-600:#A98C3C;--amber-100:#F8F0DA;--red-600:#A8362F;--red-100:#F8E4E1;
+/* --- Semantic aliases --- */
+--text-strong:var(--navy-900);--text-body:var(--sand-800);--text-muted:var(--sand-700);--text-subtle:var(--sand-600);--text-on-dark:var(--white);--text-on-dark-muted:rgba(255,255,255,.6);--text-accent:var(--gold-700);--text-link:var(--gold-700);--text-link-hover:var(--gold-500);
+--surface-page:var(--cream);--surface-card:var(--white);--surface-sunken:var(--sand-100);--surface-raised:var(--white);--surface-inverse:var(--navy-900);--surface-inverse-alt:var(--navy-700);--surface-accent-soft:var(--gold-100);--surface-brand-soft:var(--navy-50);
+--border-hairline:rgba(13,31,60,.12);--border-strong:var(--navy-900);--border-accent:var(--gold-500);--border-inverse:rgba(255,255,255,.18);
+--action-primary:var(--navy-900);--action-primary-hover:var(--navy-700);--action-primary-press:var(--navy-950);--action-primary-text:var(--white);
+--action-accent:var(--gold-500);--action-accent-hover:var(--gold-300);--action-accent-press:var(--gold-600);--action-accent-text:var(--navy-900);
+--focus-ring:var(--gold-500);
+--status-success-fg:var(--green-600);--status-success-bg:var(--green-100);--status-warning-fg:var(--amber-600);--status-warning-bg:var(--amber-100);--status-danger-fg:var(--red-600);--status-danger-bg:var(--red-100);--status-info-fg:var(--navy-600);--status-info-bg:var(--navy-50);
+--gradient-protect:linear-gradient(180deg,rgba(13,31,60,0) 0%,rgba(13,31,60,.82) 100%); /* @kind color */
+--gold-rule:linear-gradient(90deg,transparent,var(--gold-500),transparent); /* @kind color */
+}
