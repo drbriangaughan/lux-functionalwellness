@@ -1,0 +1,17 @@
+/* CHOSEN: Option A — Archivo (display + body). Libre Baskerville is the accent serif for italic ledes,
+   carried over from the current lux site build. No licensed binaries were provided, so both load from
+   Google Fonts; swap for local @font-face rules if you buy or receive files. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+:root{
+--font-display:"Archivo",system-ui,sans-serif;
+--font-sans:"Archivo",system-ui,sans-serif;
+--font-serif-accent:"Libre Baskerville",Georgia,serif;
+/* Eyebrows, badges, labels and numerals all use Archivo with wide tracking.
+   --font-mono is kept as a back-compat alias for that role; there is no monospace face in this brand. */
+--font-eyebrow:"Archivo",system-ui,sans-serif;
+--font-mono:var(--font-eyebrow);
+--font-display-stretch:112%;
+--font-display-stretch-tight:100%;
+--font-display-stretch-wide:125%;
+}
