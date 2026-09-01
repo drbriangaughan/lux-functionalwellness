@@ -1,0 +1,36 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Forms" subtitle="Input, textarea, select, checkbox, radio, switch" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{padding:20px;background:var(--surface-page)}#r{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;align-items:start}.stack{display:flex;flex-direction:column;gap:12px}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body><div id="r"></div>
+<script type="text/babel">
+const { Input, Textarea, Select, Checkbox, Radio, Switch } = window.LuxFunctionalWellnessDesignSystem_cefeb7;
+function Demo(){
+  const [c1,setC1]=React.useState(true),[c2,setC2]=React.useState(false),[g,setG]=React.useState('energy'),[s,setS]=React.useState(true);
+  return (<>
+  <div className="stack">
+    <Input label="Full name" placeholder="Jordan Alvarez" defaultValue="Jordan Alvarez" />
+    <Input label="Email" placeholder="you@email.com" hint="We reply within one business day." />
+    <Input label="Phone" defaultValue="555-01" error="Enter a 10-digit number." />
+    <Select label="Program" options={['Foundations','Optimize','Longevity']} />
+  </div>
+  <div className="stack">
+    <Textarea label="What are you hoping to resolve?" rows={3} placeholder="Tell us where you are today." />
+    <div className="stack" style={{gap:6}}>
+      <Checkbox label="Text me appointment reminders" checked={c1} onChange={setC1} />
+      <Checkbox label="Add me to the monthly protocol note" checked={c2} onChange={setC2} />
+      <Checkbox label="Unavailable option" checked={false} disabled />
+    </div>
+    <div style={{display:'flex',gap:18}}>
+      <Radio name="goal" label="More energy" checked={g==='energy'} onChange={()=>setG('energy')} />
+      <Radio name="goal" label="Metabolic health" checked={g==='metabolic'} onChange={()=>setG('metabolic')} />
+    </div>
+    <Switch label="Share labs with my care team" checked={s} onChange={setS} />
+  </div>
+  </>);
+}
+ReactDOM.createRoot(document.getElementById('r')).render(<Demo/>);
+</script></body></html>

@@ -1,0 +1,8 @@
+<!-- @dsCard group="Motion" viewport="700x150" name="Durations & easing" subtitle="120 / 200 / 340 / 600ms · cubic-bezier(.2,.6,.2,1)" -->
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css"><style>body{margin:0;padding:18px;background:var(--surface-page)}.rows{display:flex;flex-direction:column;gap:10px}.r{display:flex;align-items:center;gap:12px}.t{font-family:var(--font-mono);font-size:10px;color:var(--text-subtle);width:190px;flex:0 0 190px}.track{flex:1;height:8px;background:var(--sand-200);border-radius:var(--radius-pill);position:relative;overflow:hidden}.dot{position:absolute;top:0;left:0;height:8px;width:8px;border-radius:var(--radius-pill);background:var(--gold-400);animation:run 2.4s var(--ease-standard) infinite}.r:nth-child(2) .dot{background:var(--blue-600)}.r:nth-child(3) .dot{background:var(--blue-800)}.r:nth-child(4) .dot{background:var(--gold-600)}@keyframes run{0%{left:0}45%{left:calc(100% - 8px)}55%{left:calc(100% - 8px)}100%{left:0}}</style></head><body>
+<div class="rows">
+<div class="r"><span class="t">--dur-fast 120ms · hover, color</span><span class="track"><span class="dot" style="animation-duration:1.2s"></span></span></div>
+<div class="r"><span class="t">--dur-base 200ms · toggles, lift</span><span class="track"><span class="dot" style="animation-duration:1.8s"></span></span></div>
+<div class="r"><span class="t">--dur-slow 340ms · panels, dialog</span><span class="track"><span class="dot" style="animation-duration:2.4s"></span></span></div>
+<div class="r"><span class="t">--dur-reveal 600ms · scroll fade-up</span><span class="track"><span class="dot" style="animation-duration:3.2s"></span></span></div>
+</div></body></html>
