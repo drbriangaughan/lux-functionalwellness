@@ -1,0 +1,10 @@
+:root{
+/* 4px base grid; 2px half-step allowed for optical fixes only. */
+--space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;--space-24:96px;--space-32:128px;
+--gutter-page:24px;--gutter-page-lg:5%;--max-width-content:1200px;--max-width-prose:640px;
+--section-y:100px;--section-y-lg:128px;
+/* Radii: the brand is square. 0 is the default for buttons, cards, inputs and bands.
+   Small radii exist only for nested chrome; pill is reserved for Tag and Switch; 50% for the credential seal. */
+--radius-0:0px;--radius-1:0px;--radius-2:0px;--radius-3:0px;--radius-4:2px;--radius-pill:999px;--radius-circle:50%;
+--border-w:1px;--border-w-thick:2px;--border-w-accent:4px;--rule-w:1px;--rule-w-gold:3px;
+}
